@@ -71,10 +71,10 @@ ascending order.</p>
 <dd>An instance of <code class="docutils literal"><span class="pre">Table</span></code> containing rows sorted based on the values in <code class="docutils literal"><span class="pre">column_or_label</span></code>.</dd>
 </dl>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">marbles</span> <span class="o">=</span> <span class="n">Table</span><span class="p">()</span><span class="o">.</span><span class="n">with_columns</span><span class="p">([</span>
-<span class="gp">... </span>   <span class="s2">&quot;Color&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Red&quot;</span><span class="p">,</span> <span class="s2">&quot;Green&quot;</span><span class="p">,</span> <span class="s2">&quot;Blue&quot;</span><span class="p">,</span> <span class="s2">&quot;Red&quot;</span><span class="p">,</span> <span class="s2">&quot;Green&quot;</span><span class="p">,</span> <span class="s2">&quot;Green&quot;</span><span class="p">],</span>
-<span class="gp">... </span>   <span class="s2">&quot;Shape&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Round&quot;</span><span class="p">,</span> <span class="s2">&quot;Rectangular&quot;</span><span class="p">,</span> <span class="s2">&quot;Rectangular&quot;</span><span class="p">,</span> <span class="s2">&quot;Round&quot;</span><span class="p">,</span> <span class="s2">&quot;Rectangular&quot;</span><span class="p">,</span> <span class="s2">&quot;Round&quot;</span><span class="p">],</span>
-<span class="gp">... </span>   <span class="s2">&quot;Amount&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
-<span class="gp">... </span>   <span class="s2">&quot;Price&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mf">1.30</span><span class="p">,</span> <span class="mf">1.30</span><span class="p">,</span> <span class="mf">2.00</span><span class="p">,</span> <span class="mf">1.75</span><span class="p">,</span> <span class="mf">1.40</span><span class="p">,</span> <span class="mf">1.00</span><span class="p">]])</span>
+<span class="gp">... </span>   <span class="s">&quot;Color&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;Red&quot;</span><span class="p">,</span> <span class="s">&quot;Green&quot;</span><span class="p">,</span> <span class="s">&quot;Blue&quot;</span><span class="p">,</span> <span class="s">&quot;Red&quot;</span><span class="p">,</span> <span class="s">&quot;Green&quot;</span><span class="p">,</span> <span class="s">&quot;Green&quot;</span><span class="p">],</span>
+<span class="gp">... </span>   <span class="s">&quot;Shape&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;Round&quot;</span><span class="p">,</span> <span class="s">&quot;Rectangular&quot;</span><span class="p">,</span> <span class="s">&quot;Rectangular&quot;</span><span class="p">,</span> <span class="s">&quot;Round&quot;</span><span class="p">,</span> <span class="s">&quot;Rectangular&quot;</span><span class="p">,</span> <span class="s">&quot;Round&quot;</span><span class="p">],</span>
+<span class="gp">... </span>   <span class="s">&quot;Amount&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+<span class="gp">... </span>   <span class="s">&quot;Price&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mf">1.30</span><span class="p">,</span> <span class="mf">1.30</span><span class="p">,</span> <span class="mf">2.00</span><span class="p">,</span> <span class="mf">1.75</span><span class="p">,</span> <span class="mf">1.40</span><span class="p">,</span> <span class="mf">1.00</span><span class="p">]])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">marbles</span>
 <span class="go">Color | Shape       | Amount | Price</span>
 <span class="go">Red   | Round       | 4      | 1.3</span>
@@ -83,7 +83,7 @@ ascending order.</p>
 <span class="go">Red   | Round       | 7      | 1.75</span>
 <span class="go">Green | Rectangular | 9      | 1.4</span>
 <span class="go">Green | Round       | 2      | 1</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">marbles</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s2">&quot;Amount&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">marbles</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s">&quot;Amount&quot;</span><span class="p">)</span>
 <span class="go">Color | Shape       | Amount | Price</span>
 <span class="go">Green | Round       | 2      | 1</span>
 <span class="go">Red   | Round       | 4      | 1.3</span>
@@ -91,7 +91,7 @@ ascending order.</p>
 <span class="go">Red   | Round       | 7      | 1.75</span>
 <span class="go">Green | Rectangular | 9      | 1.4</span>
 <span class="go">Blue  | Rectangular | 12     | 2</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">marbles</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s2">&quot;Amount&quot;</span><span class="p">,</span> <span class="n">descending</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">marbles</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s">&quot;Amount&quot;</span><span class="p">,</span> <span class="n">descending</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
 <span class="go">Color | Shape       | Amount | Price</span>
 <span class="go">Blue  | Rectangular | 12     | 2</span>
 <span class="go">Green | Rectangular | 9      | 1.4</span>
@@ -99,7 +99,7 @@ ascending order.</p>
 <span class="go">Green | Rectangular | 6      | 1.3</span>
 <span class="go">Red   | Round       | 4      | 1.3</span>
 <span class="go">Green | Round       | 2      | 1</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">marbles</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># the Price column</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">marbles</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c"># the Price column</span>
 <span class="go">Color | Shape       | Amount | Price</span>
 <span class="go">Green | Round       | 2      | 1</span>
 <span class="go">Red   | Round       | 4      | 1.3</span>
